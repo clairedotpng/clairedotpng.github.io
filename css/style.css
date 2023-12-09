@@ -4,13 +4,13 @@
     --bgColor: #232437;
     --altColor: #212337;
     --hlColor: #764efc;
+    --headerHrColor: #34217a;
     --headerOutlineColor: #1d1f2a;
     --headerShadow: #181928;
     --bioColor: #2a2c39;
     --pfpBorderColor: #5a0291;
     --dropdownLangColor: #15181f;
     --langsColor: #e3e0fe;
-    --sidebarColor: #252a35;
 }
 
 @font-face {
@@ -67,19 +67,18 @@ Various */
     padding-top: 10px;
 }
 
+#header-hr {
+    color: var(--headerHrColor);
+    box-shadow: 1px 1px var(--headerHrColor);
+}
+
 #header {
-    outline: 3px solid var(--headerOutlineColor);
+    outline: 4px solid var(--headerOutlineColor);
     background-color: var(--altColor);
-    box-shadow: 8px 8px var(--headerShadow);
+    box-shadow: 10px 10px var(--headerShadow);
     padding: 10px;
     border-radius: 10px;
     position: relative;
-}
-
-#logo {
-    vertical-align: auto;
-    display: inline-block;
-    width: 400px;
 }
 
 #pages {
@@ -91,14 +90,51 @@ Various */
     padding-left: 10px;
 }
 
+@media (max-width: 776px) {
+    #header-hr {
+        display: none;
+    }
+
+    #header {
+        height: 120px;
+    }
+
+    #pages, #dropdown-lang {
+        padding-top: 20px;
+    }
+}
+
+
+#logo {
+    vertical-align: auto;
+    display: inline-block;
+    width: 400px;
+}
+
+@media (max-width: 515px) {
+    #logo {
+        width: 250px;
+    }
+}
+
+
 #sidebar {
-    background-color: var(--sidebarColor);
+    outline: 4px solid var(--headerOutlineColor);
+    background-color: var(--altColor);
+    box-shadow: 10px 10px var(--headerShadow);
     float: right;
     border-radius: 10px;
     padding-left: 25px;
-    margin-top: 20px;
+    margin-top: 30px;
     width: 300px;
 }
+
+@media (max-width: 790px) {
+    #sidebar {
+        display: none;
+    }
+}
+
 
 #langs {
     background-color: var(--dropdownLangColor);
@@ -147,6 +183,13 @@ Various */
     padding: 40px;
     position: absolute;
 }
+
+@media (max-width: 515px) {
+    #status {
+        display: none;
+    }
+}
+
 
 .pop {
     animation: pop 0.58s infinite;
