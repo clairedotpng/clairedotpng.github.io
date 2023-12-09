@@ -47,6 +47,66 @@ body {
     text-align: center;
 }
 
+.article {
+    background-color: var(--altColor);
+    outline: 4px solid var(--headerOutlineColor);
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin: 50px;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 10px 10px var(--headerShadow);
+
+}
+
+.articleIMG {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 10px 10px var(--headerShadow);
+}
+
+.articleHL {
+    padding-top: 10px;
+    float: left;
+}
+
+.articleHR {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--headerHrColor);
+    box-shadow: 1px 1px var(--headerHrColor);
+}
+
+.articleTitle {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.articlePage {
+    background-color: var(--altColor);
+    width: 70%;
+    border-radius: 10px;
+} 
+
+@media (max-width: 450px) {
+    .articlePage {
+        width: 90%;
+    }
+}
+
+.articleBanner {
+    margin: 10px;
+    width: 70%;
+    border-radius: 12px;
+    outline: 4px solid var(--headerOutlineColor);
+}
+
+.articleText {
+    padding: 10px;
+    text-align: left;
+}
+
 
 /* IDs 
    --- 
@@ -77,6 +137,7 @@ Various */
     background-color: var(--altColor);
     box-shadow: 10px 10px var(--headerShadow);
     padding: 10px;
+    margin-top: 10px;
     border-radius: 10px;
     position: relative;
 }
@@ -99,7 +160,8 @@ Various */
         height: 120px;
     }
 
-    #pages, #dropdown-lang {
+    #pages,
+    #dropdown-lang {
         padding-top: 20px;
     }
 }
@@ -145,11 +207,12 @@ Various */
 }
 
 #intro {
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-left: 50px;
 }
 
 #intro-title {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
@@ -167,9 +230,9 @@ Various */
     border-radius: 10px;
     z-index: 1;
     position: absolute;
-    top:  30%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
 }
 
