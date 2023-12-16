@@ -18,19 +18,19 @@
     src: url("../font/Monocraft.otf");
 }
 
-html {
+html, body {
     background: linear-gradient(0deg, rgba(35, 36, 55, 1) 0%, rgba(53, 29, 89, 1) 80%);
     min-height: 100%;
     color: var(--textColor);
-    font-family: Monocraft;
+    font-family: Monocraft;    
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+
 }
 
 a {
     color: var(--hlColor);
-}
-
-body {
-    margin: 0;
 }
 
 /* Classes */
@@ -50,14 +50,17 @@ body {
 .article {
     background-color: var(--altColor);
     outline: 4px solid var(--headerOutlineColor);
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    margin: 50px;
-    width: 40%;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
     border-radius: 10px;
     box-shadow: 10px 10px var(--headerShadow);
+    display: inline-block;
+}
 
+#articlesContainer {
+    width: 40%;
 }
 
 .articleIMG {
@@ -66,8 +69,19 @@ body {
     box-shadow: 10px 10px var(--headerShadow);
 }
 
+@media (max-width: 545px) {
+    .article {
+        width: 230px;
+    }
+
+    .articleIMG {
+        width: 230px;
+    }
+
+}
+
 .articleHL {
-    padding-top: 10px;
+    padding-top: 20px;
     float: left;
 }
 
@@ -80,19 +94,15 @@ body {
 
 .articleTitle {
     font-size: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .articlePage {
     background-color: var(--altColor);
     width: 70%;
     border-radius: 10px;
-} 
-
-@media (max-width: 450px) {
-    .articlePage {
-        width: 90%;
-    }
 }
 
 .articleBanner {
@@ -103,7 +113,7 @@ body {
 }
 
 .articleText {
-    padding: 10px;
+    padding: 30px;
     text-align: left;
 }
 
@@ -162,7 +172,7 @@ Various */
 
     #pages,
     #dropdown-lang {
-        padding-top: 20px;
+        padding-top: 15px;
     }
 }
 
@@ -186,12 +196,12 @@ Various */
     box-shadow: 10px 10px var(--headerShadow);
     float: right;
     border-radius: 10px;
-    padding-left: 25px;
+    padding-left: 20px;
     margin-top: 30px;
     width: 300px;
 }
 
-@media (max-width: 790px) {
+@media (max-width: 880px) {
     #sidebar {
         display: none;
     }
@@ -207,8 +217,9 @@ Various */
 }
 
 #intro {
-    padding-top: 40px;
-    padding-left: 50px;
+    padding-top: 30px;
+    padding-left: 20px;
+    max-width: 800px;
 }
 
 #intro-title {
@@ -234,6 +245,12 @@ Various */
     left: 50%;
     transform: translate(-50%, -50%);
 
+}
+
+@media (max-width: 460px) {
+    #bio {
+        width: 300px;
+    }
 }
 
 
