@@ -1,0 +1,86 @@
+/* Main */
+:root {
+    --textColor: #9ba1ac;
+    --bgColor: #232437;
+    --altColor: #212337;
+    --hlColor: #764efc;
+    --headerHrColor: #34217a;
+    --headerOutlineColor: #1d1f2a;
+    --headerShadow: #181928;
+    --bioColor: #2a2c39;
+    --pfpBorderColor: #5a0291;
+    --dropdownLangColor: #15181f;
+    --langsColor: #e3e0fe;
+}
+
+/* index.html */
+.article {
+    background-color: var(--altColor);
+    outline: 4px solid var(--headerOutlineColor);
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 10px var(--headerShadow);
+    display: inline-block;
+}
+
+.articleHL {
+    padding-top: 20px;
+    float: left;
+}
+
+.articleIMG {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 10px 10px var(--headerShadow);
+}
+
+#articlesContainer {
+    width: 30%;
+}
+
+@media (max-width: 545px) {
+    .article {
+        width: 230px;
+    }
+
+    .articleIMG {
+        width: 230px;
+    }
+
+}
+
+/* Actual articles */
+.articleHR {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--headerHrColor);
+    box-shadow: 1px 1px var(--headerHrColor);
+}
+
+.articleTitle {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.articlePage {
+    background-color: var(--altColor);
+    width: 70%;
+    border-radius: 10px;
+}
+
+.articleBanner {
+    margin: 10px;
+    width: 70%;
+    border-radius: 12px;
+    outline: 4px solid var(--headerOutlineColor);
+}
+
+.articleText {
+    padding: 30px;
+    text-align: left;
+}

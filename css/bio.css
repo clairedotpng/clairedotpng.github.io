@@ -1,0 +1,117 @@
+/* Main */
+:root {
+    --textColor: #9ba1ac;
+    --bgColor: #232437;
+    --altColor: #212337;
+    --hlColor: #764efc;
+    --headerHrColor: #34217a;
+    --headerOutlineColor: #1d1f2a;
+    --headerShadow: #181928;
+    --bioColor: #2a2c39;
+    --pfpBorderColor: #5a0291;
+    --dropdownLangColor: #15181f;
+    --langsColor: #e3e0fe;
+}
+
+/* IDs */
+#avatar {
+    border-radius: 50%;
+    border: 3px solid var(--pfpBorderColor);
+    width: 40%;
+}
+
+#bio {
+    color: var(--textColor);
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+@media (max-width: 460px) {
+    #bio {
+        width: 300px;
+    }
+}
+
+/* Classes 
+-- Wave */
+.bioWave {
+    background: linear-gradient(60deg, #49177d 0%, #3a1b62 100%);
+}
+
+.inner-header {
+    height: 30vh;
+    width: 100%;
+}
+
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+
+    /* Fix for safari gap */
+    min-height: 100px;
+    max-height: 150px;
+}
+
+/* Animation */
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* Shrinking for mobile */
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+}

@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Lair</title>
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/article.css">
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
 </head>
 
-<script src="./js/script.js"></script>
+<script src="./js/splash.js"></script>
 
 <body>
 
     <div id="main">
 
-        <div id="header">
+        <header id="header">
 
             <div class="splash">
                 <div class="pop" id="status"></div>
@@ -23,24 +25,27 @@
 
             <img id="logo" src="./images/logo.png" alt="Claire's lair">
 
-            <div id="dropdown-lang">
-                <select name="Language" id="langs">
-                    <option value="it">🇮🇹 - Italiano</option>
-                    <option value="uk">🇬🇧 - English</option>
-                </select>
+            <div id="menu">
+        
+                <div id="about">
+                    <!-- About me -->
+                    <span>
+                        <a href="./html/bio.html">About me</a> |
+                    </span>
+                </div>
+    
+                <div id="dropdown-lang">
+                    <select name="Language" id="langs">
+                        <option value="it">🇮🇹 - Italiano</option>
+                        <option value="uk">🇬🇧 - English</option>
+                    </select>
+                </div>
+                
             </div>
 
-            <div id="pages">
-
-                <!-- About me -->
-                <span>
-                    <a href="./html/bio.html">About me</a> |
-                </span>
-
-            </div>
             <hr id="header-hr">
 
-        </div>
+        </header>
 
         <div id="sidebar">
 
@@ -76,7 +81,7 @@
 
         <div id="articlesContainer">
 
-            <div class="article">
+            <article class="article">
                 <span>
                     <img class="articleIMG" src="./images/earthbound.jpg" alt="Earthbound fanart by Christopher Behr">
                 </span>
@@ -86,7 +91,7 @@
                         Earthbound è il simbolo di una generazione</a>
                 </snap>
 
-            </div>
+            </article>
 
         </div>
 
